@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Shopware Backend Components Batch Processes
+title: Backend Components - Batch Processes
 github_link: developers-guide/backend-components/batch-processes/index.md
 tags:
   - backend
@@ -98,8 +98,8 @@ class Shopware_Controllers_Backend_SwagProduct extends Shopware_Controllers_Back
 
 Both methods are quite simple and should only show you a simple implementation of the `Shopware.window.Progress` component.
 
-### Preparation Ext JS Listing
-In Ext JS, you need to add a new toolbar button in the listing window. This button will trigger the appropriate batch process. Put the following code in `SwagProduct/Views/backend/swag_product/view/list/product.js`:
+### Preparation ExtJS Listing
+In ExtJS, you need to add a new toolbar button in the listing window. This button will trigger the appropriate batch process. Put the following code in `SwagProduct/Views/backend/swag_product/view/list/product.js`:
 
 ```php
 Ext.define('Shopware.apps.SwagProduct.view.list.Product', {
@@ -328,11 +328,11 @@ Ext.define('Shopware.apps.SwagProduct.controller.Main', {
                     tasks: [{
                         event: 'deactivate-products-process',
                         data: Ext.clone(selection),
-                        text: 'Produkt [0] von [1]'
+                        text: 'Product [0] of [1]'
                     }, {
                         event: 'change-create-date-process',
                         data: Ext.clone(selection),
-                        text: 'Geändertes Erstelldatum [0] von [1]'
+                        text: 'Revised delivery date [0] of[1]'
                     }],
 
                     infoText: '<h2>Deactivate products</h2>' +
